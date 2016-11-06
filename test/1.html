@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Achus Challenge</title>
+    <script text="javascript">
+        var counter = 0 ;
+        function clicker()
+        {            
+            counter++;
+            var currentImage = document.getElementById("img1").src;            
+            var imageOne = "IMG_0001.JPG"
+            var imageTwo =  "IMG_0002.JPG";
+            document.getElementById("img1").src = null;
+            
+            if(counter%2==1)
+                document.getElementById("img1").src = imageTwo;
+            else 
+                document.getElementById("img1").src = imageOne;
+        }
+    </script>
+    
+</head>
+    <body>
+        <img name ="image" id="img1" src="IMG_0001.JPG" onclick="clicker(img1);"/>
+        
+    </body>
+</html>
