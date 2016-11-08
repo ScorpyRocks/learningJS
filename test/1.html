@@ -3,7 +3,7 @@
     <title>Achus Challenge</title>
     <script text="javascript">
         var counter = 0 ;
-        function clicker()
+        function clicker1()
         {            
             counter++;
             var currentImage = document.getElementById("img1").src;            
@@ -16,11 +16,24 @@
             else 
                 document.getElementById("img1").src = imageOne;
         }
+        
+        function clicker2()
+        {     
+            var currentImage = document.getElementById("img1").src;            
+            var imageOne = "IMG_0001.JPG"
+            var imageTwo =  "IMG_0002.JPG";
+            document.getElementById("img1").src = null;
+            
+            if(currentImage.indexOf(imageTwo)==-1)
+                document.getElementById("img1").src = imageTwo;
+            else 
+                document.getElementById("img1").src = imageOne;
+        }
     </script>
     
 </head>
     <body>
-        <img name ="image" id="img1" src="IMG_0001.JPG" onclick="clicker(img1);"/>
+        <img name ="image" id="img1" src="IMG_0001.JPG" onclick="clicker2(img1);"/>
         
     </body>
 </html>
